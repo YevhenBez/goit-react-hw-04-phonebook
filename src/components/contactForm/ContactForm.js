@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import css from './css/contactForm.module.css';
 
-const ContactForm = ({addContact}) => {
+const ContactForm = ({onSubmit}) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -18,23 +18,15 @@ const ContactForm = ({addContact}) => {
     } else {
       setName(value);
     }
-
-    //     this.setState({ [name]: value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // console.log(addContact)
-
-    addContact(name, number);
-
-    //     this.props.onSubmit(this.state);
+    onSubmit(name, number);
 
     setName('');
     setNumber('');
-
-    //     this.setState({ name: '', number: '' });
   };
 
   return (

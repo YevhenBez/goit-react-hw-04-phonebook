@@ -32,7 +32,7 @@ class App extends React.Component {
     }
   }
 
-  addContact = ({ name, number }) => {
+  addContact = ( name, number ) => {
     const contact = {
       id: nanoid(),
       name,
