@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import css from './css/contactForm.module.css';
 
-const ContactForm = ({onSubmit}) => {
+const ContactForm = ({ onSubmit }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -20,7 +20,7 @@ const ContactForm = ({onSubmit}) => {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
 
     onSubmit(name, number);
