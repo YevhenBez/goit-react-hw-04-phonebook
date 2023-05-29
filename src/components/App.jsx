@@ -20,7 +20,7 @@ const App = () => {
 
   useEffect(() => {
     localStorage.setItem('contactsLclStrg', JSON.stringify(contacts));
-  });
+  }, [contacts]);
 
   const addContact = (name, number) => {
     const contact = {
